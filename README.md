@@ -1,5 +1,4 @@
 
-```markdown
 # Human Resource Information System using Laravel Filament
 
 Make sure you have the latest versions of Nodejs ^18, PHP ^8.2, & Composer, DBMS such as PHPmyadmin installed in your device.
@@ -60,4 +59,4 @@ To get started, follow these steps:
 
 
 This project is part of our OJT task 
-```
+
