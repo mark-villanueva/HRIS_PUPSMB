@@ -25,12 +25,13 @@ class AdminPanelProvider extends PanelProvider
     {
         return $panel
             ->brandName('HRIS PUP Interns')
+            
             ->sidebarFullyCollapsibleOnDesktop()
             ->default()
+            // ->registration()
             ->id('admin')
             ->path('admin')
             ->login()
-            ->emailVerification()
             ->colors([
                 'primary' => Color::Amber,
             ])
@@ -73,6 +74,9 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             
+            ])
+            ->plugins([
+                \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make()
             ]);
     }
 }
