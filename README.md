@@ -3,7 +3,7 @@
 
 Make sure you have the latest versions of Nodejs ^18, PHP ^8.2, & Composer, DBMS such as PHPmyadmin installed in your device.
 
-You can download/use Laravel Herd https://herd.laravel.com/windows to easily install Node.js, PHP, & Composer but Mysql is not included here for free.
+You can download/use Laravel Herd https://herd.laravel.com/windows to easily install Node.js, PHP, & Composer but Mysql isn't part of the free package.
 
 Alternatively, you can download/use Laragon https://laragon.org/download/index.html but you still have to update the included PHP & Node.js to the latest version, 
 
