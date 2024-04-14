@@ -37,6 +37,9 @@ To get started, follow these steps:
    ```
 
 6. Configure your `.env` file with your database credentials and other settings.
+    ```bash
+    cp .env.example .env
+     ```
 
 7. Migrate the database:
    ```bash
