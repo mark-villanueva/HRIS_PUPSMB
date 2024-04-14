@@ -36,27 +36,22 @@ To get started, follow these steps:
    php artisan key:generate
    ```
 
-6. Configure your `.env` file with your database credentials and other settings.
-    ```bash
-    cp .env.example .env
-     ```
-
-7. Migrate the database:
+6. Migrate the database:
    ```bash
    php artisan migrate
    ```
 
-8. Seed the Database:
+7. Seed the Database:
    ```bash
    php artisan db:seed
    ```
 
-9. Serve the application:
+8. Serve the application:
    ```bash
    php artisan serve
     ```
    
-10. Open /admin in your web browser, sign in using these credentials:
+9. Open /admin in your web browser, sign in using these credentials:
     Email: test@example.com
     Password: Password
 
