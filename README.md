@@ -41,17 +41,22 @@ To get started, follow these steps:
    php artisan migrate
    ```
 
-7. Seed the Database:
+7. Generate Permissions and/or Policies for Filament entities
+   ```bash
+   shield:generate --all
+   ```
+
+8. Seed the Database:
    ```bash
    php artisan db:seed
    ```
 
-8. Serve the application:
+9. Serve the application:
    ```bash
    php artisan serve
     ```
    
-9. Open /admin in your web browser, sign in using these credentials:
+10. Open /admin in your web browser, sign in using these credentials:
     Email: test@example.com
     Password: password
 
