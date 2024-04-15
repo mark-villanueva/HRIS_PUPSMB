@@ -43,7 +43,7 @@ To get started, follow these steps:
 
 7. Generate Permissions and/or Policies for Filament entities
    ```bash
-   shield:generate --all
+   php artisan shield:generate --all
    ```
 
 8. Seed the Database:
