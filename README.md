@@ -50,13 +50,17 @@ To get started, follow these steps:
    ```bash
    php artisan db:seed
    ```
+9. Set the seeded credential as super_admin:
+   ```bash
+   php artisan shield:super-admin
+   ```
 
-9. Serve the application:
+10. Serve the application:
    ```bash
    php artisan serve
     ```
    
-10. Open /admin in your web browser, sign in using these credentials:
+11. Open /admin in your web browser, sign in using these credentials:
     Email: test@example.com
     Password: password
 
