@@ -60,6 +60,11 @@ To get started, follow these steps:
     Email: test@example.com
     Password: password
 
+### Additional: Use this if the app is slow 
+ ```bash
+php artisan icons:cache
+```
+
 
 This project is part of our OJT task 
 
