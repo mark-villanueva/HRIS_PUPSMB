@@ -53,7 +53,7 @@ To get started, follow these steps:
    
 9. Open /admin in your web browser, sign in using these credentials:
     Email: test@example.com
-    Password: Password
+    Password: password
 
 
 This project is part of our OJT task 
