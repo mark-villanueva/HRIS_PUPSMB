@@ -21,7 +21,7 @@ class PayrollResource extends Resource
 {
     protected static ?string $model = Payroll::class;
 
-    protected static ?string $navigationIcon = null;
+    protected static ?string $navigationIcon = 'heroicon-o-banknotes';
     protected static ?string $navigationLabel = 'Payroll'; 
     protected static ?int $navigationSort = 1;
     protected static ?string $navigationGroup = 'Payroll Management';

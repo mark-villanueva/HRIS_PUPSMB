@@ -17,7 +17,7 @@ class EmploymentTypesResource extends Resource
 {
     protected static ?string $model = EmploymentTypes::class;
 
-    protected static ?string $navigationIcon = null;
+    protected static ?string $navigationIcon = 'heroicon-o-briefcase';
     protected static ?string $recordTitleAttribute = 'name';
     protected static ?string $navigationLabel = 'Employments Types'; 
     protected static ?int $navigationSort = 1;

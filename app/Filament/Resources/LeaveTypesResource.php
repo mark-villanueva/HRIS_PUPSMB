@@ -21,7 +21,7 @@ class LeaveTypesResource extends Resource
     protected static ?string $model = LeaveTypes::class;
     protected static ?string $recordTitleAttribute = 'name';
     protected static ?int $navigationSort = 1;
-    protected static ?string $navigationIcon = null;
+    protected static ?string $navigationIcon = 'heroicon-o-rectangle-group';
     protected static ?string $navigationGroup = 'Leave Management';
     
 

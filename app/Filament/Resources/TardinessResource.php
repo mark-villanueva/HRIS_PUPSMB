@@ -18,7 +18,7 @@ class TardinessResource extends Resource
 {
     protected static ?string $model = Tardiness::class;
 
-    protected static ?string $navigationIcon = null;
+    protected static ?string $navigationIcon = 'heroicon-o-clock';
     protected static ?string $recordTitleAttribute = 'name';
     protected static ?string $navigationLabel = 'Tardiness'; 
     protected static ?int $navigationSort = 4;

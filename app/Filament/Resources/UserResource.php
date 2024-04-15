@@ -19,11 +19,11 @@ class UserResource extends Resource
 {
     protected static ?string $model = User::class;
 
-    protected static ?string $navigationIcon = null;
+    protected static ?string $navigationIcon = 'heroicon-o-users';
     protected static ?string $recordTitleAttribute = 'name';
     protected static ?string $navigationLabel = 'Users'; 
     protected static ?int $navigationSort = 4;
-    protected static ?string $navigationGroup = 'Employee';
+    protected static ?string $navigationGroup = 'User Management';
  
 
     public static function form(Form $form): Form
@@ -39,7 +39,7 @@ class UserResource extends Resource
                 TextInput::make('password') 
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Select::make('roles')
+                Select::make('roles')
                     ->relationship('roles', 'name')
                     ->multiple()
                     ->preload()
@@ -53,7 +53,8 @@ class UserResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('id'),
                 Tables\Columns\TextColumn::make('name'),
-                Tables\Columns\TextColumn::make('email'),          
+                Tables\Columns\TextColumn::make('email'),           
+                Tables\Columns\TextColumn::make('roles.name')      
             ])
             ->filters([
                 //

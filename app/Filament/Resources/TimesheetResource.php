@@ -26,7 +26,7 @@ class TimesheetResource extends Resource
 {
     protected static ?string $model = Timesheet::class;
 
-    protected static ?string $navigationIcon = null;
+    protected static ?string $navigationIcon = 'heroicon-o-table-cells';
     protected static ?string $navigationLabel = 'Timesheet'; 
     protected static ?int $navigationSort = 6;
     protected static ?string $navigationGroup = 'Attendance';

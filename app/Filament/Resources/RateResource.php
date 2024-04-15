@@ -18,7 +18,7 @@ class RateResource extends Resource
 {
     protected static ?string $model = Rate::class;
 
-    protected static ?string $navigationIcon = null; 
+    protected static ?string $navigationIcon = 'heroicon-o-banknotes'; 
     protected static ?string $recordTitleAttribute = 'type';
     protected static ?string $navigationLabel = 'Rates'; 
     protected static ?int $navigationSort = 3;

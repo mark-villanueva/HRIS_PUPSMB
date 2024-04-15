@@ -16,43 +16,14 @@ class EmployeesImporter extends Importer
         return [
             ImportColumn::make('employeenumber')
                 ->label('Employee Number')
-                ->requiredMapping()
-                ->rules(['required', 'max:255']),
+                ->requiredMapping(),
             ImportColumn::make('fullname')
                 ->label('Full Name')
-                ->requiredMapping()
-                ->rules(['required', 'max:255']),
-            ImportColumn::make('offices')
-                ->label('Offices')
-                ->requiredMapping()
-                ->relationship()
-                ->rules(['required']),
-            ImportColumn::make('departments')
-                ->label('Departments')
-                ->requiredMapping()
-                ->relationship()
-                ->rules(['required']),
-            ImportColumn::make('employmenttypes')
-                ->label('Employment Types')
-                ->requiredMapping()
-                ->relationship()
-                ->rules(['required']),
-            ImportColumn::make('biometric')
-                ->label('Biometric')
-                ->rules(['max:255']),
+                ->requiredMapping(),
             ImportColumn::make('basicsalary') 
                 ->label('Basic Salary')
                 ->numeric()
                 ->rules(['integer']),
-            ImportColumn::make('minimumwage')
-                ->label('Minimum Wage')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('payrollgroup')
-                ->label('Payroll Group')
-                ->requiredMapping()
-                ->rules(['required', 'max:255']),
             ImportColumn::make('tinnumber')
                 ->label('TIN Number')
                 ->numeric()
@@ -69,46 +40,6 @@ class EmployeesImporter extends Importer
                 ->label('HDMF')
                 ->numeric()
                 ->rules(['integer']),
-            ImportColumn::make('timesheetrequired')
-                ->label('Timesheet Required')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('holidaypay')
-                ->label('Holiday Pay')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('specialholidaypay') 
-                ->label('Special Holiday Pay')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('premiumholidaypay')
-                ->label('Premium Holiday Pay')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('restdaypay')
-                ->label('Restday Pay')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('overtime')
-                ->label('Overtime')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('deminimis')
-                ->label('De Minimis')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
-            ImportColumn::make('nightdifferential')
-                ->label('Night Differential')
-                ->requiredMapping()
-                ->boolean()
-                ->rules(['required', 'boolean']),
         ];
     }
 

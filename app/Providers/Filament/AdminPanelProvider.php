@@ -39,16 +39,11 @@ class AdminPanelProvider extends PanelProvider
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
                 
             ->navigationGroups([
-                NavigationGroup::make('Company')
-                     ->icon('heroicon-o-building-office'),
-                NavigationGroup::make('Employee')
-                    ->icon('heroicon-o-user'),
-                NavigationGroup::make('Attendance')
-                    ->icon('heroicon-o-document-text'),
-                NavigationGroup::make('Leave Management')
-                    ->icon('heroicon-o-book-open'),
+                NavigationGroup::make('Company'),
+                NavigationGroup::make('Employee'),
+                NavigationGroup::make('Attendance'),
+                NavigationGroup::make('Leave Management'),
                 NavigationGroup::make('Payroll Management')
-                    ->icon('heroicon-o-banknotes')
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
