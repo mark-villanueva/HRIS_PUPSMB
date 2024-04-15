@@ -59,16 +59,18 @@ To get started, follow these steps:
 10. Serve the application:
    ```bash
    php artisan serve
-    ```
+   ```
    
 11. Open /admin in your web browser, sign in using these credentials:
+   ```bash
     Email: test@example.com
     Password: password
+   ```
 
 ## Additional: Use this if the app is slow 
- ```bash
+  ```bash
 php artisan icons:cache
-```
+  ```
 
 
 This project is part of our OJT task 
