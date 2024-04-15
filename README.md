@@ -50,6 +50,7 @@ To get started, follow these steps:
    ```bash
    php artisan db:seed
    ```
+   
 9. Set the seeded credential as super_admin:
    ```bash
    php artisan shield:super-admin
@@ -64,7 +65,7 @@ To get started, follow these steps:
     Email: test@example.com
     Password: password
 
-### Additional: Use this if the app is slow 
+## Additional: Use this if the app is slow 
  ```bash
 php artisan icons:cache
 ```
