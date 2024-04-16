@@ -137,10 +137,6 @@ class EmployeesResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->headerActions([
-                ImportAction::make()
-                    ->importer(EmployeesImporter::class)
-            ])
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->sortable(),

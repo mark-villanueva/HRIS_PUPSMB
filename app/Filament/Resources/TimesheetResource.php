@@ -74,15 +74,6 @@ class TimesheetResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->headerActions([
-                ImportAction::make()
-                    ->importer(TimesheetImporter::class),
-                ExportAction::make()
-                    ->exporter(TimesheetExporter::class)
-                    ->formats([
-                        ExportFormat::Csv,
-                ])
-            ])
             ->columns([
                 Tables\Columns\TextColumn::make('employees.employeenumber')
                     ->label('Employee Number')

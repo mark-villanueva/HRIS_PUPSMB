@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('date');
             $table->unsignedInteger('gross')->nullable();
             $table->unsignedInteger('net')->nullable();
-            $table->boolean('is_open');
+            $table->boolean('is_open')->default(false);
             $table->timestamps();
         });
     }

@@ -18,23 +18,29 @@ use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Filament\Navigation\NavigationGroup;
+use App\Filament\AvatarProviders\BoringAvatarsProvider;
 
 class AdminPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->brandName('HRIS PUP Interns')
-            
-            ->sidebarFullyCollapsibleOnDesktop()
+            ->brandName('HRIS PUPSMB Interns')
             ->default()
-            // ->registration()
             ->id('admin')
             ->path('admin')
             ->login()
+            ->passwordReset()
+            ->emailVerification()
+            ->profile()
             ->colors([
                 'primary' => Color::Amber,
             ])
+            ->favicon(asset('PUPlogo.png'))
+
+            ->sidebarFullyCollapsibleOnDesktop()
+            ->defaultAvatarProvider(BoringAvatarsProvider::class)
+
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
                 

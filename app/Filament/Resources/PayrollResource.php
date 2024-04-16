@@ -61,6 +61,7 @@ class PayrollResource extends Resource
                     ->numeric()
                     ->sortable(),
                 ToggleColumn::make('is_open')
+                    ->default(false)
 
             ])
             ->filters([
