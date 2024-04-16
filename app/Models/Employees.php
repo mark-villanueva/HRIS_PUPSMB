@@ -39,5 +39,10 @@ class Employees extends Model
     {
         return $this->hasMany(Payroll::class);
     }
+
+}
+
+foreach (Employees::all() as $employees_fullname) {
+    $employees_fullname->fullname;
 }
 

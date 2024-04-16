@@ -31,16 +31,13 @@ class PayrollResource extends Resource
         return $form
             ->schema([
                 Select::make('employees_id')
-                    ->label('Payroll Group')
-                    ->relationship('employees', 'payrollgroup')
-                    ->searchable()
-                    ->preload()
-                    ->required(), 
-                Forms\Components\DatePicker::make('date')
+                    ->label('Employee')
+                    ->relationship('employees', 'fullname'),
+                DatePicker::make('date')
                     ->required(),
-                Forms\Components\TextInput::make('gross')
+                TextInput::make('gross')
                     ->numeric(),
-                Forms\Components\TextInput::make('net')
+                TextInput::make('net')
                     ->numeric(),
             ]);
     }
@@ -49,8 +46,8 @@ class PayrollResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('employees.payrollgroup')
-                    ->label('Payroll Group / Period'),
+                Tables\Columns\TextColumn::make('employees.fullname')
+                    ->label('Employee'),
                 Tables\Columns\TextColumn::make('date')
                     ->date()
                     ->sortable(),

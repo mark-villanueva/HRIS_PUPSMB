@@ -18,6 +18,7 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Section;
+use Filament\Tables\Filters\SelectFilter;
 
 class EmployeesResource extends Resource
 {
@@ -159,7 +160,13 @@ class EmployeesResource extends Resource
                     ->searchable()
             ])
             ->filters([
-                //
+                SelectFilter::make('payrollgroup')
+                    ->options([
+                        'Weekly' => 'Weekly',
+                        'Bi-weekly' => 'Bi-weekly',
+                        'Semi-monthly' => 'Semi-monthly', 
+                        'Monthly' => 'Monthly'
+                    ])
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
