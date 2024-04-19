@@ -18,6 +18,9 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class LeaveRequestsResource extends Resource
 {
@@ -29,14 +32,23 @@ class LeaveRequestsResource extends Resource
 
     public static function form(Form $form): Form
     {
+        $user = Auth::user(); // Get the authenticated user here
         return $form
             ->schema([
-                Select::make('employees_id')
+        
+                Select::make('users_id')
                     ->label('Employee Name')
-                    ->relationship('employees', 'fullname')
-                    ->searchable()
-                    ->preload()
-                    ->required(), 
+                    ->relationship('users', 'name')
+                    ->options(
+                        function () use ($user) {
+                            // Return an array containing only the authenticated user
+                            return [$user->getKey() => $user->name];
+                        }
+                    )
+                  
+                    ->default($user->getKey()) // Set the default value to the authenticated user's ID
+                    ->required(),
+
                 Select::make('leavetypes_id')
                     ->label('Select Leave Type')
                     ->relationship('leavetypes', 'name')

@@ -23,6 +23,11 @@ class LeaveRequests extends Model
         return $this->belongsTo(Departments::class);
     }
 
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }
 
 
