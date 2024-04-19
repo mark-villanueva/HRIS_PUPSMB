@@ -11,14 +11,14 @@ use Filament\Resources\Resource;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Checkbox;
-use App\Filament\Imports\EmployeesImporter;
-use Filament\Tables\Actions\ImportAction;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\Section;
 use Filament\Tables\Filters\SelectFilter;
+use Filament\Tables\Actions\ImportAction;
+use App\Filament\Imports\EmployeesImporter;
 
 class EmployeesResource extends Resource
 {
@@ -138,6 +138,10 @@ class EmployeesResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->headerActions([
+                ImportAction::make()
+                    ->importer(EmployeesImporter::class)
+            ])
             ->columns([
                 Tables\Columns\TextColumn::make('id')
                     ->sortable(),
