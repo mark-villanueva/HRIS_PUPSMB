@@ -74,7 +74,7 @@ class LeaveRequestsResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('employees.fullname')
+                Tables\Columns\TextColumn::make('users.name')
                     ->label('Name')
                     ->sortable() 
                     ->searchable(),
