@@ -76,7 +76,7 @@ class LeaveRequestsResource extends Resource
                     ->sortable(),
                 Tables\Columns\TextColumn::make('description'),
                 ToggleColumn::make('is_approved')
-                    ->label('Approved'),
+                    ->label('Approved')
             ])
             ->filters([
                 TernaryFilter::make('is_approved')

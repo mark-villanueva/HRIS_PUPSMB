@@ -12,4 +12,10 @@ class Payroll extends Model
     {
         return $this->belongsTo(Employees::class);
     }
+
+    public function getFullNameAttribute()
+    {
+        // Assuming ModelA is the name of the first model and you want to access it through a relationship
+        return $this->employees->fullname; // Assuming 'modelA' is the relationship name
+    }
 }

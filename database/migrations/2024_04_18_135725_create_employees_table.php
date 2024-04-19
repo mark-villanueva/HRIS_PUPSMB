@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('employees', function (Blueprint $table) {
             $table->id();
             $table->string('employeenumber');
-            $table->string('fullname');
+            $table->string('fullname')->nullable();
             $table->foreignId('offices_id')->constrained('offices')->cascadeOnDelete(); 
             $table->foreignId('departments_id')->constrained('departments')->cascadeOnDelete(); 
             $table->foreignId('employmenttypes_id')->constrained('employment_types')->cascadeOnDelete();
@@ -47,12 +47,3 @@ return new class extends Migration
         Schema::dropIfExists('employees');
     }
 };
-
-
-
-
-
-
-
-
-
