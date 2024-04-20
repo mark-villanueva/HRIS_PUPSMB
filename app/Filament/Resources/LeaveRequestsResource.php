@@ -19,6 +19,8 @@ use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Auth;
+use Filament\Actions;
+use Filament\Actions\Action;
 
 
 
@@ -87,15 +89,19 @@ class LeaveRequestsResource extends Resource
                 Tables\Columns\TextColumn::make('to')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('description'),
-                ToggleColumn::make('is_approved')
-                    ->label('Approved')
+                \EightyNine\Approvals\Tables\Columns\ApprovalStatusColumn::make("approvalStatus.status"),
+                
             ])
             ->filters([
-                TernaryFilter::make('is_approved')
-                    ->label('Approved'),
+                
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                ...\EightyNine\Approvals\Tables\Actions\ApprovalActions::make(
+                    [
+                        Tables\Actions\EditAction::make(),
+                        Tables\Actions\ViewAction::make()
+                    ]
+                ),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
