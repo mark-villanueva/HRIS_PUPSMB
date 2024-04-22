@@ -78,7 +78,8 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->plugins([
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
-                \EightyNine\Approvals\ApprovalPlugin::make()
+                \EightyNine\Approvals\ApprovalPlugin::make(),
+                \EightyNine\Reports\ReportsPlugin::make()
             ]);
     }
 }
